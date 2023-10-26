@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;padding: 0;
+            background: black;
+        }
+        .right_slider {
+            margin: 200px auto 0;
+    height: 250px;
+    width: 400px;
+    position: relative;
+    background: linear-gradient(0deg,#000,#262626);
+    /* background-color: rgb(35, 202, 49); */
+}
+.right_slider:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000 );
+    background-size: 400%;
+    width:calc(100% + 10px);
+    height:calc(100% + 10px);
+    z-index: -1;
+    animation: slide_br 20s linear  infinite ;
+
+}
+
+.right_slider:after{
+    filter: blur(20px);
+}
+
+@keyframes slide_br{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="right_slider"></div>
+</body>
+</html>
