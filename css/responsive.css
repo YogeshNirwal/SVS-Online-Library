@@ -1,6 +1,14 @@
-/* @media screen and (min-width:1200px) {
+@media screen and (max-width:1200px) {
     
-    body{
-        background-color: aqua;
+    .menu {
+        display: block; /* Display the menu icon */
     }
-} */
+    
+    ul {
+        display: none; /* Hide the navigation links */
+    }
+    
+    /* ul.active {
+        display: flex; /* Show the navigation links when the menu is active 
+    } */
+}
